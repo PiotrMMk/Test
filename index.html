@@ -64,8 +64,7 @@
 
     <!-- Nagłówek -->
     <header id="home" class="header-bg relative h-screen">
-        <div class="absolute inset-0 bg-black bg-opacity-50"></div>
-        <!-- Zmieniono odstęp na górze, aby zawartość nie była zasłonięta przez menu nawigacji -->
+        <!-- Usunięto div z przyciemnieniem tła -->
         <div class="absolute inset-0 flex flex-col justify-center items-center text-center text-white p-4 pt-[5.5rem]">
             <h1 class="text-4xl md:text-6xl font-bold tracking-tight">KOA ARCHITEKCI</h1>
             <p class="mt-4 text-xl md:text-2xl max-w-2xl font-light">Projektujemy przestrzeń, która działa i inspiruje.</p>
@@ -138,32 +137,48 @@
         </div>
     </section>
 
-    <!-- Sekcja Zespół -->
-    <section id="team" class="py-16 md:py-24 bg-gray-100">
+    <!-- Sekcja Zespół - zaktualizowana, aby pasowała do układu z dostarczonego obrazu -->
+    <section id="team" class="py-16 md:py-24 bg-gray-800 text-white">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Zespół</h2>
-            <div class="flex flex-col md:flex-row justify-center items-center gap-12">
-                <!-- Piotr Młodzianowski -->
-                <!-- Usunięto cień -->
-                <div class="bg-white rounded-xl p-6 text-center md:max-w-sm">
-                    <!-- Zaktualizowana ścieżka do zdjęcia w folderze `images` -->
-                    <img src="images/WOJ1.jpg" alt="Piotr Młodzianowski" class="w-full md:w-64 md:h-64 mx-auto mb-4 object-cover">
-                    <h3 class="text-xl font-bold">Piotr Młodzianowski</h3>
-                    <p class="text-yellow-500 font-semibold mt-1">Prezes Zarządu, Architekt</p>
-                    <p class="mt-4 text-gray-600 text-sm">Założyciel i główny projektant w KOA Architekci. Absolwent Politechniki Gdańskiej.</p>
+            <div class="flex flex-col md:flex-row justify-center items-stretch gap-8 max-w-6xl mx-auto">
+                <!-- Lewa kolumna - Piotr Młodzianowski -->
+                <div class="w-full md:w-1/2 flex flex-col justify-between p-8 bg-gray-900 rounded-xl">
+                    <div class="flex items-center space-x-6">
+                        <img src="images/WOJ1.jpg" alt="Piotr Młodzianowski" class="w-24 h-24 object-cover rounded-full">
+                        <div>
+                            <h3 class="text-xl font-bold">PIOTR MŁODZIANOWSKI</h3>
+                            <p class="text-sm font-semibold text-yellow-500">Prezes Zarządu, Architekt IARP</p>
+                            <p class="text-sm mt-1">piotr@koaarchitekci.com</p>
+                        </div>
+                    </div>
+                    <div class="mt-8 text-sm leading-relaxed">
+                        <p>
+                            Piotr - architekt i urbanista, założyciel i główny projektant w KOA Architekci. Absolwent Wydziału Architektury Politechniki Gdańskiej. Członek Pomorskiej Izby Architektów Rzeczypospolitej Polskiej z uprawnieniami do sporządzania świadectw charakterystyki energetycznej budynków.
+                        </p>
+                    </div>
                 </div>
-                <!-- Dominika Sambor -->
-                <!-- Usunięto cień -->
-                <div class="bg-white rounded-xl p-6 text-center md:max-w-sm">
-                    <!-- Zaktualizowana ścieżka do zdjęcia w folderze `images` -->
-                    <img src="images/WOJ2.jpg" alt="Dominika Sambor" class="w-full md:w-64 md:h-64 mx-auto mb-4 object-cover">
-                    <h3 class="text-xl font-bold">Dominika Sambor</h3>
-                    <p class="text-yellow-500 font-semibold mt-1">Architekt, Architekt Wnętrz</p>
-                    <p class="mt-4 text-gray-600 text-sm">Absolwentka Wydziału Architektury Politechniki Gdańskiej oraz Liceum Sztuk Plastycznych.</p>
+
+                <!-- Prawa kolumna - Dominika Sambor -->
+                <div class="w-full md:w-1/2 flex flex-col justify-between p-8 bg-gray-900 rounded-xl">
+                    <div class="text-sm leading-relaxed">
+                        <p>
+                            Dominika - architekt, architekt wnętrz i plastyk intermedialista. Absolwentka Wydziału Architektury Politechniki Gdańskiej oraz Liceum Sztuk Plastycznych.
+                        </p>
+                    </div>
+                    <div class="flex items-center justify-end space-x-6 mt-8">
+                        <div>
+                            <h3 class="text-xl font-bold text-right">DOMINIKA SAMBOR</h3>
+                            <p class="text-sm font-semibold text-yellow-500 text-right">Architekt, Architekt Wnętrz</p>
+                            <p class="text-sm mt-1 text-right">biuro@koaarchitekci.com</p>
+                        </div>
+                        <img src="images/WOJ2.jpg" alt="Dominika Sambor" class="w-24 h-24 object-cover rounded-full">
+                    </div>
                 </div>
             </div>
         </div>
     </section>
+
 
     <!-- Sekcja O Nas -->
     <section id="about" class="py-16 md:py-24 bg-white">
