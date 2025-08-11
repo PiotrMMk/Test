@@ -1,4 +1,3 @@
-Plik: index.html
 <!DOCTYPE html>
 <html lang="pl">
 <head>
@@ -21,11 +20,12 @@ Plik: index.html
             background-position: center;
         }
         .project-card {
-            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            transition: transform 0.3s ease-in-out;
         }
         .project-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            /* Usunięto cień z efektu hover */
+            box-shadow: none;
         }
         /* Styl dla efektu przewijania sekcji */
         html {
@@ -35,8 +35,8 @@ Plik: index.html
 </head>
 <body class="bg-gray-50 text-gray-800">
 
-    <!-- Pasek nawigacji, teraz "przyklejony" do góry ekranu, z powrotem o pełnej szerokości, ale o zmniejszonej wysokości -->
-    <nav class="sticky top-0 z-50 px-6 py-3 flex justify-between items-center text-white backdrop-blur-sm bg-gray-900 bg-opacity-80">
+    <!-- Pasek nawigacji, teraz "przyklejony" do góry ekranu, bez transparentności i cieni -->
+    <nav class="sticky top-0 z-50 px-6 py-3 flex justify-between items-center text-white bg-gray-800">
         <a href="#" class="flex items-center space-x-2 text-xl md:text-2xl font-bold">
             <!-- Logotyp, zastąp ikonę swoim logo -->
             <span class="text-3xl md:text-4xl text-yellow-400">KOΛ</span>
@@ -55,7 +55,7 @@ Plik: index.html
     </nav>
 
     <!-- Menu mobilne (ukryte domyślnie), teraz z odpowiednim odstępem od góry -->
-    <div id="mobile-menu" class="hidden md:hidden fixed inset-x-0 top-0 mt-[4rem] p-4 bg-gray-900 bg-opacity-90 text-white text-center space-y-4 text-lg z-40">
+    <div id="mobile-menu" class="hidden md:hidden fixed inset-x-0 top-0 mt-[4rem] p-4 bg-gray-900 text-white text-center space-y-4 text-lg z-40">
         <a href="#projects" class="block py-2 hover:text-yellow-400 transition-colors">Projekty</a>
         <a href="#team" class="block py-2 hover:text-yellow-400 transition-colors">Zespół</a>
         <a href="#about" class="block py-2 hover:text-yellow-400 transition-colors">O Nas</a>
@@ -81,8 +81,8 @@ Plik: index.html
             <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Projekty</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Karta projektu - dom jednorodzinny -->
-                <!-- Zaktualizowano link, aby prowadził do nowej strony -->
-                <a href="domy-jednorodzinne.html" class="project-card bg-gray-100 rounded-xl overflow-hidden shadow-lg">
+                <!-- Zaktualizowano link, aby prowadził do nowej strony i usunięto cień -->
+                <a href="domy-jednorodzinne.html" class="project-card bg-gray-100 rounded-xl overflow-hidden">
                     <img src="images/dom-wspolczesny.jpg" alt="Dom jednorodzinny" class="w-full h-64 object-cover">
                     <div class="p-6">
                         <h3 class="text-xl font-bold mb-2">Domy jednorodzinne</h3>
@@ -90,8 +90,8 @@ Plik: index.html
                     </div>
                 </a>
                 <!-- Karta projektu - domy wielorodzinne -->
-                <!-- Zaktualizowano link, aby prowadził do nowej strony -->
-                <a href="domy-wielorodzinne.html" class="project-card bg-gray-100 rounded-xl overflow-hidden shadow-lg">
+                <!-- Zaktualizowano link, aby prowadził do nowej strony i usunięto cień -->
+                <a href="domy-wielorodzinne.html" class="project-card bg-gray-100 rounded-xl overflow-hidden">
                     <img src="images/domy-blizniacze.jpg" alt="Domy wielorodzinne" class="w-full h-64 object-cover">
                     <div class="p-6">
                         <h3 class="text-xl font-bold mb-2">Domy wielorodzinne</h3>
@@ -99,8 +99,8 @@ Plik: index.html
                     </div>
                 </a>
                 <!-- Karta projektu - hale przemysłowe -->
-                <!-- Zaktualizowano link, aby prowadził do nowej strony -->
-                <a href="hale-przemyslowe.html" class="project-card bg-gray-100 rounded-xl overflow-hidden shadow-lg">
+                <!-- Zaktualizowano link, aby prowadził do nowej strony i usunięto cień -->
+                <a href="hale-przemyslowe.html" class="project-card bg-gray-100 rounded-xl overflow-hidden">
                     <img src="images/hala-przemyslowa.jpg" alt="Hale przemysłowe" class="w-full h-64 object-cover">
                     <div class="p-6">
                         <h3 class="text-xl font-bold mb-2">Hale przemysłowe</h3>
@@ -108,8 +108,8 @@ Plik: index.html
                     </div>
                 </a>
                 <!-- Karta projektu - wnętrza -->
-                <!-- Zaktualizowano link, aby prowadził do nowej strony -->
-                <a href="wnetrza.html" class="project-card bg-gray-100 rounded-xl overflow-hidden shadow-lg">
+                <!-- Zaktualizowano link, aby prowadził do nowej strony i usunięto cień -->
+                <a href="wnetrza.html" class="project-card bg-gray-100 rounded-xl overflow-hidden">
                     <img src="images/projekt-wnetrza.jpg" alt="Wnętrza" class="w-full h-64 object-cover">
                     <div class="p-6">
                         <h3 class="text-xl font-bold mb-2">Wnętrza</h3>
@@ -117,8 +117,8 @@ Plik: index.html
                     </div>
                 </a>
                 <!-- Karta projektu - rozbudowy -->
-                <!-- Zaktualizowano link, aby prowadził do nowej strony -->
-                <a href="rozbudowy-i-przebudowy.html" class="project-card bg-gray-100 rounded-xl overflow-hidden shadow-lg">
+                <!-- Zaktualizowano link, aby prowadził do nowej strony i usunięto cień -->
+                <a href="rozbudowy-i-przebudowy.html" class="project-card bg-gray-100 rounded-xl overflow-hidden">
                     <img src="images/przebudowa-domu.jpg" alt="Rozbudowy i przebudowy" class="w-full h-64 object-cover">
                     <div class="p-6">
                         <h3 class="text-xl font-bold mb-2">Rozbudowy i przebudowy</h3>
@@ -126,8 +126,8 @@ Plik: index.html
                     </div>
                 </a>
                 <!-- Karta projektu - adaptacje -->
-                <!-- Zaktualizowano link, aby prowadził do nowej strony -->
-                <a href="adaptacje-projektow.html" class="project-card bg-gray-100 rounded-xl overflow-hidden shadow-lg">
+                <!-- Zaktualizowano link, aby prowadził do nowej strony i usunięto cień -->
+                <a href="adaptacje-projektow.html" class="project-card bg-gray-100 rounded-xl overflow-hidden">
                     <img src="images/adaptacje-projektow.jpg" alt="Adaptacje projektów" class="w-full h-64 object-cover">
                     <div class="p-6">
                         <h3 class="text-xl font-bold mb-2">Adaptacje projektów typowych</h3>
@@ -144,19 +144,19 @@ Plik: index.html
             <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Zespół</h2>
             <div class="flex flex-col md:flex-row justify-center items-center gap-12">
                 <!-- Piotr Młodzianowski -->
-                <!-- Zmieniono klasę kontenera, aby zdjecie na telefonie było większe. -->
-                <div class="bg-white rounded-xl shadow-lg p-6 text-center md:max-w-sm">
+                <!-- Usunięto cień -->
+                <div class="bg-white rounded-xl p-6 text-center md:max-w-sm">
                     <!-- Zaktualizowana ścieżka do zdjęcia w folderze `images` -->
-                    <img src="images/WOJ1.jpg" alt="Piotr Młodzianowski" class="w-full md:w-1200 md:h-1600 mx-auto mb-4 object-cover">
+                    <img src="images/WOJ1.jpg" alt="Piotr Młodzianowski" class="w-full md:w-64 md:h-64 mx-auto mb-4 object-cover">
                     <h3 class="text-xl font-bold">Piotr Młodzianowski</h3>
                     <p class="text-yellow-500 font-semibold mt-1">Prezes Zarządu, Architekt</p>
                     <p class="mt-4 text-gray-600 text-sm">Założyciel i główny projektant w KOA Architekci. Absolwent Politechniki Gdańskiej.</p>
                 </div>
                 <!-- Dominika Sambor -->
-                <!-- Zmieniono klasę kontenera, aby zdjecie na telefonie było większe. -->
-                <div class="bg-white rounded-xl shadow-lg p-6 text-center md:max-w-sm">
+                <!-- Usunięto cień -->
+                <div class="bg-white rounded-xl p-6 text-center md:max-w-sm">
                     <!-- Zaktualizowana ścieżka do zdjęcia w folderze `images` -->
-                    <img src="images/WOJ2.jpg" alt="Dominika Sambor" class="w-full md:w-1200 md:h-1600mx-auto mb-4 object-cover">
+                    <img src="images/WOJ2.jpg" alt="Dominika Sambor" class="w-full md:w-64 md:h-64 mx-auto mb-4 object-cover">
                     <h3 class="text-xl font-bold">Dominika Sambor</h3>
                     <p class="text-yellow-500 font-semibold mt-1">Architekt, Architekt Wnętrz</p>
                     <p class="mt-4 text-gray-600 text-sm">Absolwentka Wydziału Architektury Politechniki Gdańskiej oraz Liceum Sztuk Plastycznych.</p>
