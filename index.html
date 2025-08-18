@@ -14,7 +14,6 @@
             font-family: 'Inter', sans-serif;
         }
         .header-bg {
-            /* Zaktualizowana ścieżka do zdjęcia w folderze `images` */
             background-image: url('images/zdjecie1.jpg');
             background-size: cover;
             background-position: center;
@@ -24,21 +23,24 @@
         }
         .project-card:hover {
             transform: translateY(-5px);
-            /* Usunięto cień z efektu hover */
             box-shadow: none;
         }
-        /* Styl dla efektu przewijania sekcji */
         html {
             scroll-behavior: smooth;
+        }
+        #mobile-menu {
+            transform: translateY(-100%);
+            transition: transform 0.3s ease-in-out;
+        }
+        #mobile-menu.show {
+            transform: translateY(0);
         }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
 
-    <!-- Pasek nawigacji, teraz "przyklejony" do góry ekranu, bez transparentności i cieni -->
-    <nav class="sticky top-0 z-50 px-6 py-3 flex justify-between items-center text-white bg-gray-800">
+    <nav class="sticky top-0 z-50 px-4 sm:px-6 py-3 flex justify-between items-center text-white bg-gray-800">
         <a href="#" class="flex items-center space-x-2 text-xl md:text-2xl font-bold">
-            <!-- Logotyp, zastąp ikonę swoim logo -->
             <span class="text-3xl md:text-4xl text-yellow-400">KOΛ</span>
             <span>ARCHITEKCI</span>
         </a>
@@ -48,13 +50,11 @@
             <a href="#about" class="hover:text-yellow-400 transition-colors">O Nas</a>
             <a href="#contact" class="hover:text-yellow-400 transition-colors">Kontakt</a>
         </div>
-        <!-- Ikona menu dla urządzeń mobilnych -->
         <button id="mobile-menu-button" class="md:hidden text-white text-2xl">
             <i class="fas fa-bars"></i>
         </button>
     </nav>
 
-    <!-- Menu mobilne (ukryte domyślnie), teraz z odpowiednim odstępem od góry -->
     <div id="mobile-menu" class="hidden md:hidden fixed inset-x-0 top-0 mt-[4rem] p-4 bg-gray-900 text-white text-center space-y-4 text-lg z-40">
         <a href="#projects" class="block py-2 hover:text-yellow-400 transition-colors">Projekty</a>
         <a href="#team" class="block py-2 hover:text-yellow-400 transition-colors">Zespół</a>
@@ -62,9 +62,7 @@
         <a href="#contact" class="block py-2 hover:text-yellow-400 transition-colors">Kontakt</a>
     </div>
 
-    <!-- Nagłówek -->
     <header id="home" class="header-bg relative h-screen">
-        <!-- Usunięto div z przyciemnieniem tła -->
         <div class="absolute inset-0 flex flex-col justify-center items-center text-center text-white p-4 pt-[5.5rem]">
             <h1 class="text-4xl md:text-6xl font-bold tracking-tight">KOA ARCHITEKCI</h1>
             <p class="mt-4 text-xl md:text-2xl max-w-2xl font-light">Projektujemy przestrzeń, która działa i inspiruje.</p>
@@ -74,13 +72,18 @@
         </div>
     </header>
 
-    <!-- Sekcja Projektów -->
     <section id="projects" class="py-16 md:py-24 bg-white">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Projekty</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Karta projektu - dom jednorodzinny -->
-                <!-- Zaktualizowano link, aby prowadził do nowej strony i usunięto cień -->
+                <a href="domy-jednorodzinne.html" class="project-card bg-gray-100 rounded-xl overflow-hidden">
+                    <img src="images/dom-wspolczesny.jpg" alt="Nowoczesny dom jednorodzinny zaprojektowany przez KOA Architekci" class="w-full h-64 object-cover" loading="lazy">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Domy jednorodzinne</h3>
+                        <p class="text-gray-600 text-sm">KOA Architekci projektuje nowoczesne domy jednorodzinne w Gdańsku, dopasowane do stylu życia, lokalizacji działki i budżetu klienta.</p>
+                        <a href="domy-jednorodzinne.html" title="Zobacz projekty domów jednorodzinnych KOA Architekci" aria-label="Przejdź do projektów domów jednorodzinnych" class="text-yellow-500 hover:text-yellow-600 font-semibold">Zobacz więcej</a>
+                    </div>
+                </a>
                 <a href="domy-jednorodzinne.html" class="project-card bg-gray-100 rounded-xl overflow-hidden">
                     <img src="images/dom-wspolczesny.jpg" alt="Dom jednorodzinny" class="w-full h-64 object-cover">
                     <div class="p-6">
@@ -88,8 +91,6 @@
                         <p class="text-gray-600 text-sm">Projektujemy domy dopasowane do stylu życia, działki, budżetu i preferencji inwestora.</p>
                     </div>
                 </a>
-                <!-- Karta projektu - domy wielorodzinne -->
-                <!-- Zaktualizowano link, aby prowadził do nowej strony i usunięto cień -->
                 <a href="domy-wielorodzinne.html" class="project-card bg-gray-100 rounded-xl overflow-hidden">
                     <img src="images/domy-blizniacze.jpg" alt="Domy wielorodzinne" class="w-full h-64 object-cover">
                     <div class="p-6">
@@ -97,8 +98,6 @@
                         <p class="text-gray-600 text-sm">Projektujemy domy dla dwóch lub więcej rodzin, z niezależnymi wejściami i zoptymalizowanymi układami.</p>
                     </div>
                 </a>
-                <!-- Karta projektu - hale przemysłowe -->
-                <!-- Zaktualizowano link, aby prowadził do nowej strony i usunięto cień -->
                 <a href="hale-przemyslowe.html" class="project-card bg-gray-100 rounded-xl overflow-hidden">
                     <img src="images/hala-przemyslowa.jpg" alt="Hale przemysłowe" class="w-full h-64 object-cover">
                     <div class="p-6">
@@ -106,8 +105,6 @@
                         <p class="text-gray-600 text-sm">Tworzymy funkcjonalne i nowoczesne projekty hal przemysłowych, dopasowane do specyfiki działalności.</p>
                     </div>
                 </a>
-                <!-- Karta projektu - wnętrza -->
-                <!-- Zaktualizowano link, aby prowadził do nowej strony i usunięto cień -->
                 <a href="wnetrza.html" class="project-card bg-gray-100 rounded-xl overflow-hidden">
                     <img src="images/projekt-wnetrza.jpg" alt="Wnętrza" class="w-full h-64 object-cover">
                     <div class="p-6">
@@ -115,8 +112,6 @@
                         <p class="text-gray-600 text-sm">Kompleksowo projektujemy wnętrza spójne z architekturą budynku, funkcjonalne i dopasowane do stylu życia.</p>
                     </div>
                 </a>
-                <!-- Karta projektu - rozbudowy -->
-                <!-- Zaktualizowano link, aby prowadził do nowej strony i usunięto cień -->
                 <a href="rozbudowy-i-przebudowy.html" class="project-card bg-gray-100 rounded-xl overflow-hidden">
                     <img src="images/przebudowa-domu.jpg" alt="Rozbudowy i przebudowy" class="w-full h-64 object-cover">
                     <div class="p-6">
@@ -124,8 +119,6 @@
                         <p class="text-gray-600 text-sm">Przekształcamy istniejące domy, projektujemy rozbudowy, nadbudowy oraz modernizacje.</p>
                     </div>
                 </a>
-                <!-- Karta projektu - adaptacje -->
-                <!-- Zaktualizowano link, aby prowadził do nowej strony i usunięto cień -->
                 <a href="adaptacje-projektow.html" class="project-card bg-gray-100 rounded-xl overflow-hidden">
                     <img src="images/adaptacje-projektow.jpg" alt="Adaptacje projektów" class="w-full h-64 object-cover">
                     <div class="p-6">
@@ -137,20 +130,16 @@
         </div>
     </section>
 
-    <!-- Sekcja Zespół - zaktualizowana, aby pasowała do układu z dostarczonego obrazu -->
     <section id="team" class="py-16 md:py-24 bg-gray-900 text-white">
         <div class="container mx-auto px-4 max-w-6xl">
             <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Zespół</h2>
             <div class="flex flex-col md:flex-row justify-center items-stretch gap-12 lg:gap-16">
-                <!-- Piotr Młodzianowski -->
                 <div class="w-full md:w-1/2 flex flex-col md:flex-row bg-gray-800 rounded-xl overflow-hidden shadow-lg">
                     <div class="w-full md:w-1/2 md:h-96">
-                        <!-- Użycie dużego zdjęcia, jak na wzorze -->
                         <img src="images/WOJ1.jpg" alt="Piotr Młodzianowski" class="w-full h-full object-cover">
                     </div>
                     <div class="w-full md:w-1/2 p-8 flex flex-col justify-between">
                         <div>
-                            <!-- Nagłówki z nowym stylem, zmieniono rozmiar fontu dla responsywności -->
                             <h3 class="text-yellow-400 text-sm font-semibold tracking-wide">PIOTR</h3>
                             <h4 class="text-xl md:text-2xl font-bold mt-2">MŁODZIANOWSKI</h4>
                             <p class="text-gray-400 mt-1">Prezes Zarządu, Architekt IARP</p>
@@ -165,16 +154,12 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- Dominika Sambor -->
                 <div class="w-full md:w-1/2 flex flex-col md:flex-row-reverse bg-gray-800 rounded-xl overflow-hidden shadow-lg">
                     <div class="w-full md:w-1/2 md:h-96">
-                        <!-- Użycie dużego zdjęcia, jak na wzorze -->
                         <img src="images/WOJ2.jpg" alt="Dominika Sambor" class="w-full h-full object-cover">
                     </div>
                     <div class="w-full md:w-1/2 p-8 flex flex-col justify-between">
                         <div>
-                            <!-- Zmieniono rozmiar fontu dla responsywności -->
                             <h3 class="text-yellow-400 text-sm font-semibold tracking-wide">DOMINIKA</h3>
                             <h4 class="text-xl md:text-2xl font-bold mt-2">SAMBOR</h4>
                             <p class="text-gray-400 mt-1">Architekt, Architekt Wnętrz</p>
@@ -193,8 +178,6 @@
         </div>
     </section>
 
-
-    <!-- Sekcja O Nas -->
     <section id="about" class="py-16 md:py-24 bg-white">
         <div class="container mx-auto px-4 text-center max-w-4xl">
             <h2 class="text-3xl md:text-4xl font-bold mb-8">O Nas</h2>
@@ -204,7 +187,6 @@
         </div>
     </section>
 
-    <!-- Sekcja Kontakt -->
     <section id="contact" class="py-16 md:py-24 bg-gray-100">
         <div class="container mx-auto px-4 text-center max-w-2xl">
             <h2 class="text-3xl md:text-4xl font-bold mb-8">Kontakt</h2>
@@ -236,31 +218,30 @@
         </div>
     </section>
 
-    <!-- Stopka -->
     <footer class="bg-gray-800 text-white py-6 text-center">
         <p>&copy; 2024 KOA Architekci. Wszelkie prawa zastrzeżone.</p>
     </footer>
 
     <script>
-        // Skrypt do obsługi menu mobilnego
         const mobileMenuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
 
         mobileMenuButton.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
+            mobileMenu.classList.toggle('show');
         });
 
-        // Ukryj menu po kliknięciu linku
         mobileMenu.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => {
                 mobileMenu.classList.add('hidden');
+                mobileMenu.classList.remove('show');
             });
         });
 
-        // Ukryj menu po zmianie rozmiaru okna, jeśli jest większe niż mobilne
         window.addEventListener('resize', () => {
             if (window.innerWidth >= 768) {
                 mobileMenu.classList.add('hidden');
+                mobileMenu.classList.remove('show');
             }
         });
     </script>
