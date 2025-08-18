@@ -1,240 +1,254 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- SEO: Zoptymalizowany i bardziej opisowy tytuł strony -->
-    <title>KOA Architekci - Nowoczesne Projekty Domów, Gdańsk</title>
-    
-    <!-- SEO: Dodany meta opis, kluczowy dla wyszukiwarek -->
-    <meta name="description" content="KOA Architekci to biuro projektowe z Gdańska specjalizujące się w nowoczesnych domach jednorodzinnych, wnętrzach i adaptacjach. Poznaj nasz zespół i zobacz nasze realizacje.">
-
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-    <!-- SEO: Dodane dane strukturalne (Schema.org) dla biura architektonicznego -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "ArchitecturalOffice",
-      "name": "KOA Architekci",
-      "url": "https://twojadomena.pl", // Zmień na prawdziwy adres strony
-      "logo": "https://twojadomena.pl/images/logo.png", // Zmień na adres logo
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Stanisława Lema 12/26",
-        "addressLocality": "Gdańsk",
-        "postalCode": "80-126",
-        "addressCountry": "PL"
-      },
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+48-791-491-641",
-        "contactType": "customer service"
-      },
-      "email": "biuro@koaarchitekci.com"
-    }
-    </script>
-
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-        /* Wydajność: Tło ładowane bezpośrednio w CSS jest optymalne dla obrazów "Hero" */
-        .header-bg {
-            background-image: url('https://placehold.co/1920x1080/334155/FFFFFF?text=G%C5%82%C3%B3wne+Zdj%C4%99cie');
-            background-size: cover;
-            background-position: center;
-        }
-        .project-card {
-            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-        }
-        .project-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
-        }
-        /* Responsywność: Płynne przewijanie dla lepszego doświadczenia użytkownika */
-        html {
-            scroll-behavior: smooth;
-        }
-        #mobile-menu {
-            transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KOA ARCHITEKCI</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+body {
+font-family: 'Inter', sans-serif;
+}
+.header-bg {
+/* Zaktualizowana ścieżka do zdjęcia w folderze `images` */
+background-image: url('images/zdjecie1.jpg');
+background-size: cover;
+background-position: center;
+}
+.project-card {
+transition: transform 0.3s ease-in-out;
+}
+.project-card:hover {
+transform: translateY(-5px);
+/* Usunięto cień z efektu hover */
+box-shadow: none;
+}
+/* Styl dla efektu przewijania sekcji */
+html {
+scroll-behavior: smooth;
+}
+</style>
 </head>
 <body class="bg-gray-50 text-gray-800">
 
-    <nav class="sticky top-0 z-50 px-4 sm:px-6 py-3 flex justify-between items-center text-white bg-gray-800 shadow-md">
-        <a href="#" class="flex items-center space-x-2 text-xl md:text-2xl font-bold">
-            <span class="text-3xl md:text-4xl text-yellow-400">KOΛ</span>
-            <span>ARCHITEKCI</span>
-        </a>
-        <div class="hidden md:flex space-x-8 text-sm uppercase tracking-wide">
-            <a href="#projects" class="hover:text-yellow-400 transition-colors">Projekty</a>
-            <a href="#team" class="hover:text-yellow-400 transition-colors">Zespół</a>
-            <a href="#about" class="hover:text-yellow-400 transition-colors">O Nas</a>
-            <a href="#contact" class="hover:text-yellow-400 transition-colors">Kontakt</a>
-        </div>
-        <button id="mobile-menu-button" class="md:hidden text-white text-2xl z-50">
-            <i class="fas fa-bars"></i>
-        </button>
-    </nav>
+<!-- Pasek nawigacji, teraz "przyklejony" do góry ekranu, bez transparentności i cieni -->
+<nav class="sticky top-0 z-50 px-6 py-3 flex justify-between items-center text-white bg-gray-800">
+<a href="#" class="flex items-center space-x-2 text-xl md:text-2xl font-bold">
+<!-- Logotyp, zastąp ikonę swoim logo -->
+<span class="text-3xl md:text-4xl text-yellow-400">KOΛ</span>
+<span>ARCHITEKCI</span>
+</a>
+<div class="hidden md:flex space-x-8 text-sm uppercase tracking-wide">
+<a href="#projects" class="hover:text-yellow-400 transition-colors">Projekty</a>
+<a href="#team" class="hover:text-yellow-400 transition-colors">Zespół</a>
+<a href="#about" class="hover:text-yellow-400 transition-colors">O Nas</a>
+<a href="#contact" class="hover:text-yellow-400 transition-colors">Kontakt</a>
+</div>
+<!-- Ikona menu dla urządzeń mobilnych -->
+<button id="mobile-menu-button" class="md:hidden text-white text-2xl">
+<i class="fas fa-bars"></i>
+</button>
+</nav>
 
-    <!-- Responsywność: Poprawione menu mobilne (overlay) -->
-    <div id="mobile-menu" class="hidden fixed inset-0 bg-gray-900 bg-opacity-95 text-white flex flex-col items-center justify-center space-y-8 text-2xl z-40">
-        <a href="#projects" class="mobile-link block py-2 hover:text-yellow-400 transition-colors">Projekty</a>
-        <a href="#team" class="mobile-link block py-2 hover:text-yellow-400 transition-colors">Zespół</a>
-        <a href="#about" class="mobile-link block py-2 hover:text-yellow-400 transition-colors">O Nas</a>
-        <a href="#contact" class="mobile-link block py-2 hover:text-yellow-400 transition-colors">Kontakt</a>
-    </div>
+<!-- Menu mobilne (ukryte domyślnie), teraz z odpowiednim odstępem od góry -->
+<div id="mobile-menu" class="hidden md:hidden fixed inset-x-0 top-0 mt-[4rem] p-4 bg-gray-900 text-white text-center space-y-4 text-lg z-40">
+<a href="#projects" class="block py-2 hover:text-yellow-400 transition-colors">Projekty</a>
+<a href="#team" class="block py-2 hover:text-yellow-400 transition-colors">Zespół</a>
+<a href="#about" class="block py-2 hover:text-yellow-400 transition-colors">O Nas</a>
+<a href="#contact" class="block py-2 hover:text-yellow-400 transition-colors">Kontakt</a>
+</div>
 
-    <header id="home" class="header-bg relative h-screen">
-        <div class="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-center items-center text-center text-white p-4">
-            <h1 class="text-4xl md:text-6xl font-bold tracking-tight">KOA ARCHITEKCI</h1>
-            <p class="mt-4 text-xl md:text-2xl max-w-2xl font-light">Projektujemy przestrzeń, która działa i inspiruje.</p>
-            <a href="#projects" class="mt-8 px-8 py-3 bg-yellow-500 hover:bg-yellow-600 text-white rounded-full font-semibold transition-colors duration-300">
-                Zobacz nasze projekty
-            </a>
-        </div>
-    </header>
+<!-- Nagłówek -->
+<header id="home" class="header-bg relative h-screen">
+<!-- Usunięto div z przyciemnieniem tła -->
+<div class="absolute inset-0 flex flex-col justify-center items-center text-center text-white p-4 pt-[5.5rem]">
+<h1 class="text-4xl md:text-6xl font-bold tracking-tight">KOA ARCHITEKCI</h1>
+<p class="mt-4 text-xl md:text-2xl max-w-2xl font-light">Projektujemy przestrzeń, która działa i inspiruje.</p>
+<a href="#projects" class="mt-8 px-6 py-3 bg-yellow-500 hover:bg-yellow-600 text-white rounded-full font-semibold transition-colors duration-300">
+Zobacz nasze projekty
+</a>
+</div>
+</header>
 
-    <main>
-        <section id="projects" class="py-16 md:py-24 bg-white">
-            <div class="container mx-auto px-4">
-                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Projekty</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    
-                    <!-- Karta projektu - przykład zoptymalizowany -->
-                    <div class="project-card bg-gray-100 rounded-xl overflow-hidden flex flex-col">
-                        <!-- Wydajność: Użycie placeholderów i atrybutów loading/decoding -->
-                        <img src="https://placehold.co/600x400/e2e8f0/334155?text=Dom+Jednorodzinny" alt="Nowoczesny dom jednorodzinny zaprojektowany przez KOA Architekci" class="w-full h-64 object-cover" loading="lazy" decoding="async">
-                        <div class="p-6 flex flex-col flex-grow">
-                            <h3 class="text-xl font-bold mb-2">Domy jednorodzinne</h3>
-                            <p class="text-gray-600 text-sm mb-4 flex-grow">Projektujemy nowoczesne domy jednorodzinne w Gdańsku, dopasowane do stylu życia, lokalizacji działki i budżetu klienta.</p>
-                            <a href="#" title="Zobacz projekty domów jednorodzinnych KOA Architekci" class="text-yellow-500 hover:text-yellow-600 font-semibold mt-auto">Zobacz więcej &rarr;</a>
-                        </div>
-                    </div>
+<!-- Sekcja Projektów -->
+<section id="projects" class="py-16 md:py-24 bg-white">
+<div class="container mx-auto px-4">
+<h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Projekty</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Karta projektu - dom jednorodzinny -->
+<!-- Zaktualizowano link, aby prowadził do nowej strony i usunięto cień -->
+<a href="domy-jednorodzinne.html" class="project-card bg-gray-100 rounded-xl overflow-hidden">
+<img src="images/dom-wspolczesny.jpg" alt="Dom jednorodzinny" class="w-full h-64 object-cover">
+<div class="p-6">
+<h3 class="text-xl font-bold mb-2">Domy jednorodzinne</h3>
+<p class="text-gray-600 text-sm">Projektujemy domy dopasowane do stylu życia, działki, budżetu i preferencji inwestora.</p>
+</div>
+</a>
+<!-- Karta projektu - domy wielorodzinne -->
+<!-- Zaktualizowano link, aby prowadził do nowej strony i usunięto cień -->
+<a href="domy-wielorodzinne.html" class="project-card bg-gray-100 rounded-xl overflow-hidden">
+<img src="images/domy-blizniacze.jpg" alt="Domy wielorodzinne" class="w-full h-64 object-cover">
+<div class="p-6">
+<h3 class="text-xl font-bold mb-2">Domy wielorodzinne</h3>
+<p class="text-gray-600 text-sm">Projektujemy domy dla dwóch lub więcej rodzin, z niezależnymi wejściami i zoptymalizowanymi układami.</p>
+</div>
+</a>
+<!-- Karta projektu - hale przemysłowe -->
+<!-- Zaktualizowano link, aby prowadził do nowej strony i usunięto cień -->
+<a href="hale-przemyslowe.html" class="project-card bg-gray-100 rounded-xl overflow-hidden">
+<img src="images/hala-przemyslowa.jpg" alt="Hale przemysłowe" class="w-full h-64 object-cover">
+<div class="p-6">
+<h3 class="text-xl font-bold mb-2">Hale przemysłowe</h3>
+<p class="text-gray-600 text-sm">Tworzymy funkcjonalne i nowoczesne projekty hal przemysłowych, dopasowane do specyfiki działalności.</p>
+</div>
+</a>
+<!-- Karta projektu - wnętrza -->
+<!-- Zaktualizowano link, aby prowadził do nowej strony i usunięto cień -->
+<a href="wnetrza.html" class="project-card bg-gray-100 rounded-xl overflow-hidden">
+<img src="images/projekt-wnetrza.jpg" alt="Wnętrza" class="w-full h-64 object-cover">
+<div class="p-6">
+<h3 class="text-xl font-bold mb-2">Wnętrza</h3>
+<p class="text-gray-600 text-sm">Kompleksowo projektujemy wnętrza spójne z architekturą budynku, funkcjonalne i dopasowane do stylu życia.</p>
+</div>
+</a>
+<!-- Karta projektu - rozbudowy -->
+<!-- Zaktualizowano link, aby prowadził do nowej strony i usunięto cień -->
+<a href="rozbudowy-i-przebudowy.html" class="project-card bg-gray-100 rounded-xl overflow-hidden">
+<img src="images/przebudowa-domu.jpg" alt="Rozbudowy i przebudowy" class="w-full h-64 object-cover">
+<div class="p-6">
+<h3 class="text-xl font-bold mb-2">Rozbudowy i przebudowy</h3>
+<p class="text-gray-600 text-sm">Przekształcamy istniejące domy, projektujemy rozbudowy, nadbudowy oraz modernizacje.</p>
+</div>
+</a>
+<!-- Karta projektu - adaptacje -->
+<!-- Zaktualizowano link, aby prowadził do nowej strony i usunięto cień -->
+<a href="adaptacje-projektow.html" class="project-card bg-gray-100 rounded-xl overflow-hidden">
+<img src="images/adaptacje-projektow.jpg" alt="Adaptacje projektów" class="w-full h-64 object-cover">
+<div class="p-6">
+<h3 class="text-xl font-bold mb-2">Adaptacje projektów typowych</h3>
+<p class="text-gray-600 text-sm">Dostosowujemy gotowe projekty do konkretnej działki, zmieniając funkcję, elewacje, materiały i technologię.</p>
+</div>
+</a>
+</div>
+</div>
+</section>
 
-                    <div class="project-card bg-gray-100 rounded-xl overflow-hidden flex flex-col">
-                        <img src="https://placehold.co/600x400/e2e8f0/334155?text=Domy+Wielorodzinne" alt="Domy wielorodzinne" class="w-full h-64 object-cover" loading="lazy" decoding="async">
-                        <div class="p-6 flex flex-col flex-grow">
-                            <h3 class="text-xl font-bold mb-2">Domy wielorodzinne</h3>
-                            <p class="text-gray-600 text-sm mb-4 flex-grow">Projektujemy domy dla dwóch lub więcej rodzin, z niezależnymi wejściami i zoptymalizowanymi układami.</p>
-                             <a href="#" title="Zobacz projekty domów wielorodzinnych" class="text-yellow-500 hover:text-yellow-600 font-semibold mt-auto">Zobacz więcej &rarr;</a>
-                        </div>
-                    </div>
+<!-- Sekcja Zespół - zaktualizowana, aby pasowała do układu z dostarczonego obrazu -->
+<section id="team" class="py-16 md:py-24 bg-gray-900 text-white">
+<div class="container mx-auto px-4 max-w-6xl">
+<h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Zespół</h2>
+<div class="flex flex-col md:flex-row justify-center items-stretch gap-12 lg:gap-16">
+<!-- Piotr Młodzianowski -->
+<div class="w-full md:w-1/2 flex flex-col md:flex-row bg-gray-800 rounded-xl overflow-hidden shadow-lg">
+<div class="w-full md:w-1/2 md:h-96">
+<!-- Użycie dużego zdjęcia, jak na wzorze -->
+<img src="images/WOJ1.jpg" alt="Piotr Młodzianowski" class="w-full h-full object-cover">
+</div>
+<div class="w-full md:w-1/2 p-8 flex flex-col justify-between">
+<div>
+<!-- Nagłówki z nowym stylem, zmieniono rozmiar fontu dla responsywności -->
+<h3 class="text-yellow-400 text-sm font-semibold tracking-wide">PIOTR</h3>
+                            <h4 class="text-2xl md:text-3xl font-bold mt-2">MŁODZIANOWSKI</h4>
+                            <h4 class="text-xl md:text-2xl font-bold mt-2">MŁODZIANOWSKI</h4>
+<p class="text-gray-400 mt-1">Prezes Zarządu, Architekt IARP</p>
+</div>
+<div class="mt-6 text-sm text-gray-300">
+@@ -176,93 +176,93 @@
+<div>
+<!-- Zmieniono rozmiar fontu dla responsywności -->
+<h3 class="text-yellow-400 text-sm font-semibold tracking-wide">DOMINIKA</h3>
+                            <h4 class="text-2xl md:text-3xl font-bold mt-2">SAMBOR</h4>
+                            <h4 class="text-xl md:text-2xl font-bold mt-2">SAMBOR</h4>
+<p class="text-gray-400 mt-1">Architekt, Architekt Wnętrz</p>
+</div>
+<div class="mt-6 text-sm text-gray-300">
+<p>
+Absolwentka Wydziału Architektury Politechniki Gdańskiej oraz Liceum Sztuk Plastycznych.
+</p>
+</div>
+<div class="mt-6">
+<p class="text-sm font-semibold text-gray-400">biuro@koaarchitekci.com</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
 
-                    <div class="project-card bg-gray-100 rounded-xl overflow-hidden flex flex-col">
-                        <img src="https://placehold.co/600x400/e2e8f0/334155?text=Hale+Przemys%C5%82owe" alt="Hale przemysłowe" class="w-full h-64 object-cover" loading="lazy" decoding="async">
-                        <div class="p-6 flex flex-col flex-grow">
-                            <h3 class="text-xl font-bold mb-2">Hale przemysłowe</h3>
-                            <p class="text-gray-600 text-sm mb-4 flex-grow">Tworzymy funkcjonalne i nowoczesne projekty hal, dopasowane do specyfiki działalności.</p>
-                             <a href="#" title="Zobacz projekty hal przemysłowych" class="text-yellow-500 hover:text-yellow-600 font-semibold mt-auto">Zobacz więcej &rarr;</a>
-                        </div>
-                    </div>
-                    
-                    <!-- Pozostałe karty projektów... -->
 
-                </div>
-            </div>
-        </section>
+<!-- Sekcja O Nas -->
+<section id="about" class="py-16 md:py-24 bg-white">
+<div class="container mx-auto px-4 text-center max-w-4xl">
+<h2 class="text-3xl md:text-4xl font-bold mb-8">O Nas</h2>
+<p class="text-lg text-gray-600 leading-relaxed">
+KOA Architekci to zespół projektowy, który łączy funkcjonalność z wyrazistą estetyką. Tworzymy przestrzenie, które odpowiadają na realne potrzeby użytkowników, jednocześnie zachowując spójny, ponadczasowy charakter. Nasze podejście opiera się na dokładnej analizie kontekstu, otwartym dialogu z inwestorem i dbałości o każdy detal. Wierzymy, że dobrze zaprojektowana przestrzeń poprawia jakość życia i sprzyja dobremu samopoczuciu.
+</p>
+</div>
+</section>
 
-        <section id="team" class="py-16 md:py-24 bg-gray-900 text-white">
-            <!-- Zawartość sekcji Zespół bez zmian -->
-            <div class="container mx-auto px-4 max-w-6xl">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Zespół</h2>
-            <div class="flex flex-col md:flex-row justify-center items-stretch gap-12 lg:gap-16">
-                <div class="w-full md:w-1/2 flex flex-col md:flex-row bg-gray-800 rounded-xl overflow-hidden shadow-lg">
-                    <div class="w-full md:w-1/2">
-                        <img src="https://placehold.co/400x500/4b5563/FFFFFF?text=Piotr" alt="Piotr Młodzianowski" class="w-full h-full object-cover">
-                    </div>
-                    <div class="w-full md:w-1/2 p-8 flex flex-col justify-center">
-                        <h3 class="text-yellow-400 text-sm font-semibold tracking-wide">PIOTR MŁODZIANOWSKI</h3>
-                        <p class="text-gray-400 mt-1">Prezes Zarządu, Architekt IARP</p>
-                        <p class="mt-4 text-sm text-gray-300">Architekt i urbanista, założyciel i główny projektant. Absolwent Wydziału Architektury Politechniki Gdańskiej. Członek Pomorskiej Izby Architektów RP.</p>
-                        <p class="mt-4 text-sm font-semibold text-gray-400">piotr@koaarchitekci.com</p>
-                    </div>
-                </div>
-                <div class="w-full md:w-1/2 flex flex-col md:flex-row bg-gray-800 rounded-xl overflow-hidden shadow-lg">
-                    <div class="w-full md:w-1/2">
-                        <img src="https://placehold.co/400x500/4b5563/FFFFFF?text=Dominika" alt="Dominika Sambor" class="w-full h-full object-cover">
-                    </div>
-                    <div class="w-full md:w-1/2 p-8 flex flex-col justify-center">
-                        <h3 class="text-yellow-400 text-sm font-semibold tracking-wide">DOMINIKA SAMBOR</h3>
-                        <p class="text-gray-400 mt-1">Architekt, Architekt Wnętrz</p>
-                        <p class="mt-4 text-sm text-gray-300">Absolwentka Wydziału Architektury Politechniki Gdańskiej oraz Liceum Sztuk Plastycznych.</p>
-                        <p class="mt-4 text-sm font-semibold text-gray-400">biuro@koaarchitekci.com</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        </section>
+<!-- Sekcja Kontakt -->
+<section id="contact" class="py-16 md:py-24 bg-gray-100">
+<div class="container mx-auto px-4 text-center max-w-2xl">
+<h2 class="text-3xl md:text-4xl font-bold mb-8">Kontakt</h2>
+<div class="space-y-4">
+<div class="flex items-center justify-center space-x-3">
+<i class="fas fa-envelope text-yellow-500"></i>
+<a href="mailto:biuro@koaarchitekci.com" class="text-lg text-gray-600 hover:text-yellow-500 transition-colors">biuro@koaarchitekci.com</a>
+</div>
+<div class="flex items-center justify-center space-x-3">
+<i class="fas fa-phone-alt text-yellow-500"></i>
+<a href="tel:791491641" class="text-lg text-gray-600 hover:text-yellow-500 transition-colors">791 491 641</a>
+</div>
+<div class="flex items-center justify-center space-x-3">
+<i class="fas fa-map-marker-alt text-yellow-500"></i>
+<span class="text-lg text-gray-600">Stanisława Lema 12/26, 80-126 Gdańsk</span>
+</div>
+</div>
+<div class="mt-8 flex justify-center space-x-6 text-gray-600">
+<a href="https://www.linkedin.com/" target="_blank" class="hover:text-yellow-500 transition-colors text-2xl">
+<i class="fab fa-linkedin"></i>
+</a>
+<a href="https://www.facebook.com/" target="_blank" class="hover:text-yellow-500 transition-colors text-2xl">
+<i class="fab fa-facebook"></i>
+</a>
+<a href="https://www.instagram.com/" target="_blank" class="hover:text-yellow-500 transition-colors text-2xl">
+<i class="fab fa-instagram"></i>
+</a>
+</div>
+</div>
+</section>
 
-        <section id="about" class="py-16 md:py-24 bg-white">
-            <div class="container mx-auto px-4 text-center max-w-4xl">
-                <h2 class="text-3xl md:text-4xl font-bold mb-8">O Nas</h2>
-                <p class="text-lg text-gray-600 leading-relaxed">
-                    KOA Architekci to zespół projektowy, który łączy funkcjonalność z wyrazistą estetyką. Tworzymy przestrzenie, które odpowiadają na realne potrzeby użytkowników, jednocześnie zachowując spójny, ponadczasowy charakter. Nasze podejście opiera się na dokładnej analizie kontekstu, otwartym dialogu z inwestorem i dbałości o każdy detal. Wierzymy, że dobrze zaprojektowana przestrzeń poprawia jakość życia i sprzyja dobremu samopoczuciu.
-                </p>
-            </div>
-        </section>
+<!-- Stopka -->
+<footer class="bg-gray-800 text-white py-6 text-center">
+<p>&copy; 2024 KOA Architekci. Wszelkie prawa zastrzeżone.</p>
+</footer>
 
-        <section id="contact" class="py-16 md:py-24 bg-gray-100">
-            <div class="container mx-auto px-4 text-center max-w-2xl">
-                <h2 class="text-3xl md:text-4xl font-bold mb-8">Kontakt</h2>
-                <div class="space-y-4">
-                    <div class="flex items-center justify-center space-x-3">
-                        <i class="fas fa-envelope text-yellow-500"></i>
-                        <a href="mailto:biuro@koaarchitekci.com" class="text-lg text-gray-600 hover:text-yellow-500 transition-colors">biuro@koaarchitekci.com</a>
-                    </div>
-                    <div class="flex items-center justify-center space-x-3">
-                        <i class="fas fa-phone-alt text-yellow-500"></i>
-                        <a href="tel:791491641" class="text-lg text-gray-600 hover:text-yellow-500 transition-colors">791 491 641</a>
-                    </div>
-                    <div class="flex items-center justify-center space-x-3">
-                        <i class="fas fa-map-marker-alt text-yellow-500"></i>
-                        <span class="text-lg text-gray-600">Stanisława Lema 12/26, 80-126 Gdańsk</span>
-                    </div>
-                </div>
-                <div class="mt-8 flex justify-center space-x-6 text-gray-600">
-                    <a href="#" target="_blank" class="hover:text-yellow-500 transition-colors text-2xl"><i class="fab fa-linkedin"></i></a>
-                    <a href="#" target="_blank" class="hover:text-yellow-500 transition-colors text-2xl"><i class="fab fa-facebook"></i></a>
-                    <a href="#" target="_blank" class="hover:text-yellow-500 transition-colors text-2xl"><i class="fab fa-instagram"></i></a>
-                </div>
-            </div>
-        </section>
-    </main>
+<script>
+// Skrypt do obsługi menu mobilnego
+const mobileMenuButton = document.getElementById('mobile-menu-button');
+const mobileMenu = document.getElementById('mobile-menu');
 
-    <footer class="bg-gray-800 text-white py-6 text-center">
-        <p>&copy; 2024 KOA Architekci. Wszelkie prawa zastrzeżone.</p>
-    </footer>
+mobileMenuButton.addEventListener('click', () => {
+mobileMenu.classList.toggle('hidden');
+});
 
-    <script>
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const mobileMenuIcon = mobileMenuButton.querySelector('i');
-        const mobileLinks = document.querySelectorAll('.mobile-link');
+// Ukryj menu po kliknięciu linku
+mobileMenu.querySelectorAll('a').forEach(link => {
+link.addEventListener('click', () => {
+mobileMenu.classList.add('hidden');
+});
+});
 
-        function toggleMenu() {
-            mobileMenu.classList.toggle('hidden');
-            // Zmiana ikony hamburgera na X i z powrotem
-            if (mobileMenu.classList.contains('hidden')) {
-                mobileMenuIcon.classList.remove('fa-times');
-                mobileMenuIcon.classList.add('fa-bars');
-            } else {
-                mobileMenuIcon.classList.remove('fa-bars');
-                mobileMenuIcon.classList.add('fa-times');
-            }
-        }
-
-        mobileMenuButton.addEventListener('click', toggleMenu);
-        mobileLinks.forEach(link => {
-            link.addEventListener('click', toggleMenu);
-        });
-    </script>
+// Ukryj menu po zmianie rozmiaru okna, jeśli jest większe niż mobilne
+window.addEventListener('resize', () => {
+if (window.innerWidth >= 768) {
+mobileMenu.classList.add('hidden');
+}
+});
+</script>
 </body>
 </html>
